@@ -1,1 +1,29 @@
 
+import java.util.*;
+
+public class task_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random chosen_num = new Random();
+
+        int chosen = chosen_num.nextInt(100)+1;
+        for(int i =0 ; i<=6;i++){
+            System.out.println("Guess the number");
+            int user_input = sc.nextInt() ;
+            if(user_input==chosen){
+                System.out.println("congrats You get it rigth !!!");
+                return;
+            }
+            else if(user_input<chosen){
+                System.out.println("its smaller use a greater number !!!");
+            }else if(user_input>chosen){
+                System.out.println("its Greater use smaller number !!!");
+            }
+
+        }
+        System.out.println("the number is:- "+chosen);
+        System.out.println(" you Lost !!! ");
+        System.out.println(" Don't be sad Life gives you another Chance you can always try again !!! ");
+
+    }
+}
